@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Company extends Model
 {
@@ -19,7 +20,7 @@ class Company extends Model
         'end_date' => 'date',
     ];
 
-    public function responsibilities()
+    public function responsibilities(): HasMany
     {
         return $this->hasMany(Responsibility::class)
             ->orderBy('sort_order', 'asc');

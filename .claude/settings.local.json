@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(vendor/bin/pint:*)",
+      "Bash(php artisan test:*)",
+      "mcp__laravel-boost__application-info",
+      "mcp__laravel-boost__database-schema"
+    ]
+  }
+}

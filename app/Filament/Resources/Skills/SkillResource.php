@@ -6,6 +6,7 @@ use App\Filament\Resources\Skills\Pages\CreateSkill;
 use App\Filament\Resources\Skills\Pages\EditSkill;
 use App\Filament\Resources\Skills\Pages\ListSkills;
 use App\Filament\Resources\Skills\Schemas\SkillForm;
+use App\Filament\Resources\Skills\Schemas\SkillInfolist;
 use App\Filament\Resources\Skills\Tables\SkillsTable;
 use App\Models\Skill;
 use BackedEnum;
@@ -30,6 +31,11 @@ class SkillResource extends Resource
     public static function form(Schema $schema): Schema
     {
         return SkillForm::configure($schema);
+    }
+
+    public static function infolist(Schema $schema): Schema
+    {
+        return SkillInfolist::configure($schema);
     }
 
     public static function table(Table $table): Table

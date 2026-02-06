@@ -1,7 +1,6 @@
 @php
     use App\Models\Company;
     use App\Models\Skill;
-    use Carbon\Carbon;
 
     $skills = Skill::all();
 
@@ -48,9 +47,9 @@
                         @ {{ $company->name }}
 
                         @if($company->start_date)
-                            - ({{ Carbon::parse($company->start_date)->format('M Y') }} -
+                            - ({{ $company->start_date->format('M Y') }} -
                             @if($company->end_date)
-                                {{ Carbon::parse($company->end_date)->format('M Y') }}
+                                {{ $company->end_date->format('M Y') }}
                             @else
                                 Current
                             @endif

@@ -14,6 +14,12 @@ class ToolCategory extends Model
         'updated_at',
     ];
 
+    /** @var array<string, string> */
+    protected $casts = [
+        'is_hardware' => 'boolean',
+        'is_active' => 'boolean',
+    ];
+
     /** @return HasMany<Tool, ToolCategory> */
     public function tools(): HasMany
     {

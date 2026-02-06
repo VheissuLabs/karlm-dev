@@ -1,8 +1,6 @@
 <?php
 
 use App\Models\Event;
-use Carbon\Carbon;
-
 use function Livewire\Volt\{state};
 
 state([
@@ -18,7 +16,7 @@ state([
     <ul class="px-4 space-y-2 list-disc list-inside">
         @foreach ($events as $event)
             <li>
-                {{ Carbon::parse($event['date'])->format('M d, Y') }} - {{ $event['title'] }}
+                {{ $event->date->format('M d, Y') }} - {{ $event->title }}
             </li>
         @endforeach
     </ul>
